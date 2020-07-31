@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from './components/navbar/navbar'
+import SearchNews from './components/news/searchNews'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar />
+      <SearchNews />
     </div>
   );
 }
