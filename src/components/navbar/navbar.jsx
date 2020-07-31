@@ -1,31 +1,32 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Form, FormControl } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+
 
 const navbar = () => (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">CN</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#tech">Tech</Nav.Link>
+                <Nav.Link href="#tech">Technology</Nav.Link>
                 <Nav.Link href="#business">Business</Nav.Link>
                 <Nav.Link href="#science">Science</Nav.Link>
                 <Nav.Link href="#politics">Politics</Nav.Link>
                 <Nav.Link href="#world">World</Nav.Link>
-                <NavDropdown title="More" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Regional</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Lifestyle</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Entertainment</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Programming</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.5">Sports</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.6">Finance</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.7">Academia</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.8">Health</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.9">Food</NavDropdown.Item>
+                <NavDropdown title="More" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Lifestyle</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/4.0">Other</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
+            <Form inline>
+                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                <Button variant="outline-success">Search</Button>
+            </Form>
         </Navbar.Collapse>
     </Navbar>
 )
