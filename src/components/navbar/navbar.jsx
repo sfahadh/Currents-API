@@ -1,8 +1,5 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { Form, FormControl } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import './navbar.css'
 
 
 const navbar = () => (
