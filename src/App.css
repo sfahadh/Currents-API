@@ -8,3 +8,7 @@ App-header {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.align {
+  margin: 30px 6vw;
+}
