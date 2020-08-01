@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Articles from '../articles';
-import './latestNews.css'
+import '../news.css'
 
 const URL = "https://api.currentsapi.services/v1/latest-news?";
 const API_KEY = process.env.REACT_APP_CURRENTS_API_KEY;
