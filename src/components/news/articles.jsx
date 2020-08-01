@@ -8,19 +8,27 @@ const articles = ({ news }) => {
             {
                 news.map(article => {
                     return (
-                        <div className="container" id="card">
-                            <div class="card flex-row flex-wrap">
-                                <div class="card-header border-0">
-                                    <img src={article.image} alt="" height="180px" width="300px" />
-                                </div>
-                                <div class="card-block px-2">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">Description</p>
-                                    <a href="#" class="btn btn-primary">BUTTON</a>
-                                </div>
-                                <div class="w-100"></div>
-                                <div class="card-footer w-100 text-muted">
-                                    Footer stating cats are CUTE little animals
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <div class="card">
+                                        <div class="card-horizontal">
+                                            <div class="img-square-wrapper">
+                                                <img src={article.image}
+                                                    alt="Card image cap"
+                                                    width="350px"
+                                                    height="200px"
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">{article.title}</h4>
+                                                <p class="card-text">{article.description}</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">{article.published}</small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -32,3 +40,10 @@ const articles = ({ news }) => {
 }
 
 export default articles;
+
+/*
+{article.image}
+{article.title}
+{article.description}
+{article.published}
+*/
