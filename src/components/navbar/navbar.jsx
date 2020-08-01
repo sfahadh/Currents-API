@@ -2,14 +2,15 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Form, FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import './navbar.css'
 
 
 const navbar = () => (
-    <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#home">CN</Navbar.Brand>
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+        <Navbar.Brand href="#home" className="ml-3">CN</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="m-auto" >
                 <Nav.Link href="#tech">Technology</Nav.Link>
                 <Nav.Link href="#business">Business</Nav.Link>
                 <Nav.Link href="#science">Science</Nav.Link>
@@ -23,10 +24,9 @@ const navbar = () => (
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-success">Search</Button>
-            </Form>
+            <Nav className="mr-3">
+                <Nav.Link href="#latest">Latest News</Nav.Link>
+            </Nav>
         </Navbar.Collapse>
     </Navbar>
 )
