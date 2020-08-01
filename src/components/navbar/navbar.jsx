@@ -16,15 +16,22 @@ const navbar = () => (
                 <Nav.Link href="#science">Science</Nav.Link>
                 <Nav.Link href="#politics">Politics</Nav.Link>
                 <Nav.Link href="#world">World</Nav.Link>
+                <Nav.Link href="#sports">Sports</Nav.Link>
+                <Nav.Link href="#academia">Academia</Nav.Link>
+                <Nav.Link href="#game">Game</Nav.Link>
                 <NavDropdown title="More" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Lifestyle</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Regional</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">General</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Programming</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Finance</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Health</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Food</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4">Others</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
-            <Nav className="mr-3">
+            <Nav className="mr-2">
                 <Nav.Link href="#latest">Latest News</Nav.Link>
             </Nav>
         </Navbar.Collapse>
