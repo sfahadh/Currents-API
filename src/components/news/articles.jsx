@@ -2,31 +2,33 @@ import React from 'react';
 import './latestNews.css'
 
 const articles = ({ news }) => {
-    if (!news || news.length === 0) return <p>Sorry! No news</p>
+    if (!news) return <p>Sorry! No news</p>
     return (
         <div id="articles">
             {
                 news.map(article => {
                     return (
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-12 mt-3">
-                                    <div class="card">
-                                        <div class="card-horizontal">
-                                            <div class="img-square-wrapper">
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-12 mt-3">
+                                    <div className="card">
+                                        <div className="card-horizontal">
+                                            <div className="img-square-wrapper">
                                                 <img src={article.image}
                                                     alt="Card image cap"
                                                     width="350px"
                                                     height="200px"
                                                 />
                                             </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">{article.title}</h4>
-                                                <p class="card-text">{article.description}</p>
+
+                                            <div claclassNamess="card-body">
+                                                <h4 className="card-title">{article.title}</h4>
+                                                <p className="card-text">{article.description}</p>
                                             </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <small class="text-muted">{article.published}</small>
+
+                                        <div className="card-footer">
+                                            <small className="text-muted">{article.published}</small>
                                         </div>
                                     </div>
                                 </div>
@@ -46,4 +48,6 @@ export default articles;
 {article.title}
 {article.description}
 {article.published}
+
+Credits -  https://codepen.io/SteveJRobertson/pen/POdvgz
 */
