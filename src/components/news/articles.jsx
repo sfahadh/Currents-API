@@ -1,5 +1,4 @@
 import React from 'react';
-import { CardDeck, Card } from 'react-bootstrap';
 import './latestNews.css'
 
 const articles = ({ news }) => {
@@ -9,20 +8,22 @@ const articles = ({ news }) => {
             {
                 news.map(article => {
                     return (
-                        <CardDeck>
-                            <Card key={article.id}>
-                                <Card.Img variant="top" src="holder.js/100px160" />
-                                <Card.Body>
-                                    <Card.Title>{article.title}</Card.Title>
-                                    <Card.Text>
-                                        {article.description}
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer>
-                                    <small className="text-muted">{article.published}</small>
-                                </Card.Footer>
-                            </Card>
-                        </CardDeck>
+                        <div className="container" id="card">
+                            <div class="card flex-row flex-wrap">
+                                <div class="card-header border-0">
+                                    <img src={article.image} alt="" height="180px" width="300px" />
+                                </div>
+                                <div class="card-block px-2">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">Description</p>
+                                    <a href="#" class="btn btn-primary">BUTTON</a>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="card-footer w-100 text-muted">
+                                    Footer stating cats are CUTE little animals
+                                </div>
+                            </div>
+                        </div>
                     )
                 })
             }
