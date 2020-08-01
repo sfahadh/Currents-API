@@ -11,11 +11,10 @@ class searchNews extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch(`${URL}apiKey=${API_KEY}`)
-            .then(resp => resp.json())
-            .then(json => this.setState({ news: json }))
-            .catch(err => console.log(err));
+    async componentDidMount() {
+        const resp = await fetch(`${URL}apiKey=${API_KEY}`)
+        const json = await resp.json();
+        this.setState({ news: json });
     }
 
     render() {
