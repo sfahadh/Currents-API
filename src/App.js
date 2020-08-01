@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/navbar/navbar'
-import LatestNews from './components/news/latestNews'
+import LatestNews from './components/news/latestNews/latestNews'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

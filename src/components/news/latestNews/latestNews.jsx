@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Articles from './articles';
+import Articles from '../articles';
 import './latestNews.css'
 
 const URL = "https://api.currentsapi.services/v1/latest-news?";

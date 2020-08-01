@@ -1,6 +1,6 @@
 import React from 'react';
 import Blank from '../../Images/no-image-found.jpeg'
-import './latestNews.css'
+import './latestNews/latestNews.css'
 
 const articles = ({ news }) => {
     if (!news) return <p>Sorry! No news</p>
