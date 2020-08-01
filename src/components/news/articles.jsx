@@ -1,4 +1,5 @@
 import React from 'react';
+import Blank from '../../Images/no-image-found.jpeg'
 import './latestNews.css'
 
 const articles = ({ news }) => {
@@ -7,21 +8,22 @@ const articles = ({ news }) => {
         <div id="articles">
             {
                 news.map(article => {
+                    console.log(article)
                     return (
-                        <div className="container-fluid">
+                        <div className="container-fluid" key={article.id}>
                             <div className="row">
                                 <div className="col-12 mt-3">
                                     <div className="card">
                                         <div className="card-horizontal">
                                             <div className="img-square-wrapper">
-                                                <img src={article.image}
-                                                    alt="Card image cap"
+                                                <img src={article.image === "None" ? Blank : article.image}
+                                                    alt={article.title}
                                                     width="350px"
                                                     height="200px"
                                                 />
                                             </div>
 
-                                            <div claclassNamess="card-body">
+                                            <div className="card-body">
                                                 <h4 className="card-title">{article.title}</h4>
                                                 <p className="card-text">{article.description}</p>
                                             </div>
