@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-
+import { Link } from "react-router-dom";
 
 const navbar = () => (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-        <Navbar.Brand href="#home" className="ml-3">CN</Navbar.Brand>
+        <Navbar.Brand href="#home" className="ml-3"><Link to="/">CN</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="m-auto" >
@@ -28,9 +28,7 @@ const navbar = () => (
                     <NavDropdown.Item href="#action/3.4">Others</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
-            <Nav className="mr-2">
-                <Nav.Link href="#latest">Latest News</Nav.Link>
-            </Nav>
+            <Nav.Item className="mr-2"><Link to="/latestNews">Latest News</Link></Nav.Item>
         </Navbar.Collapse>
     </Navbar>
 )

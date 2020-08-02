@@ -17,7 +17,7 @@ const searchBar = () => {
                 </div>
                 <input className="form-control my-0 py-1 w-50" type="text" placeholder="search for news"
                     aria-label="Search" />
-                <Button className="ml-3" variant="secondary">Search</Button>{' '}
+                <Button className="ml-3" variant="primary">Search</Button>{' '}
             </form>
         </>
     );
