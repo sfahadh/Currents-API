@@ -1,15 +1,23 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Button } from 'react-bootstrap';
+
 import './home.css'
 
 const searchBar = () => {
     return (
         <>
-            <h1 className="text-center display-3 mt-5">Welcome to Current News</h1>
-            <FontAwesomeIcon icon="search" />
-            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                <input class="form-control form-control-sm ml-3 w-50" type="text" placeholder="Search"
+            <h1 className="text-center display-3 mt-5 mb-4">Welcome to Current News</h1>
+            <form class="form-inline d-flex justify-content-center input-group m-auto">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">
+                        <FontAwesomeIcon icon={faSearch} />
+                    </span>
+                </div>
+                <input className="form-control my-0 py-1 w-50" type="text" placeholder="search for news"
                     aria-label="Search" />
+                <Button className="ml-3" variant="secondary">Search</Button>{' '}
             </form>
         </>
     );
