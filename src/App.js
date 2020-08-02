@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/navbar/navbar'
+import NavigationBar from './components/navbar/navigationBar'
 import Home from './components/home/searchbar'
 import LatestNews from './components/news/latestNews/latestNews'
 import { Switch, Route } from "react-router-dom";
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <NavigationBar />
       <div className="align">
         <Switch>
           <Route exact path="/">
