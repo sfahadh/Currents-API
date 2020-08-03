@@ -19,15 +19,11 @@ function App() {
       <NavigationBar changeCategory={changeCategory} />
       <div className="align">
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Route exact path="/" component={Home} />
 
-          <Route path="/latestNews">
-            <LatestNews />
-          </Route>
+          <Route path="/latestNews" component={LatestNews} />
 
-          <Route path="/category">
+          <Route path="/:category">
             <CategorizedNews category={category} />
           </Route>
         </Switch>
