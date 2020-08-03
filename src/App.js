@@ -20,10 +20,8 @@ function App() {
       <div className="align">
         <Switch>
           <Route exact path="/" component={Home} />
-
           <Route path="/latestNews" component={LatestNews} />
-
-          <Route path="/:category">
+          <Route path={`/${category}`}>
             <CategorizedNews category={category} />
           </Route>
         </Switch>

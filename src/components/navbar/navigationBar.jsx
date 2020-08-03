@@ -13,7 +13,7 @@ const NavigationBar = ({ changeCategory }) => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto" >
                     <Nav.Item onClick={() => changeCategory('technology')}>
-                        <Link to="/category" className="link">Technology</Link>
+                        <Link to="/technology" className="link">Technology</Link>
                     </Nav.Item>
                     <Nav.Link href="#business" onClick={() => changeCategory('business')}>Business</Nav.Link>
                     <Nav.Link href="#science">Science</Nav.Link>
