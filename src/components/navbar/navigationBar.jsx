@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './navigationBar.css'
 
-const NavigationBar = () => {
-    const [category, setCategory] = useState('');
-
+const NavigationBar = ({ changeCategory, category }) => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
             <Navbar.Brand href="#home" className="ml-3">
@@ -14,8 +12,8 @@ const NavigationBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto" >
-                    <Nav.Link>Technology</Nav.Link>
-                    <Nav.Link href="#business">Business</Nav.Link>
+                    <Nav.Link href="#technology" onClick={() => changeCategory('Technology')}>Technology</Nav.Link>
+                    <Nav.Link href="#business" onClick={() => changeCategory('Business')}>Business</Nav.Link>
                     <Nav.Link href="#science">Science</Nav.Link>
                     <Nav.Link href="#politics">Politics</Nav.Link>
                     <Nav.Link href="#world">World</Nav.Link>

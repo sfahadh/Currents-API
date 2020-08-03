@@ -7,9 +7,16 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [category, setCategory] = React.useState('');
+  console.log(category);
+
+  const changeCategory = newCategory => {
+    setCategory(newCategory);
+  }
+
   return (
     <div className="App">
-      <NavigationBar />
+      <NavigationBar changeCategory={changeCategory} category={category} />
       <div className="align">
         <Switch>
           <Route exact path="/">
