@@ -15,13 +15,35 @@ const NavigationBar = ({ changeCategory }) => {
                     <Nav.Item onClick={() => changeCategory('technology')}>
                         <Link to="/technology" className="link">Technology</Link>
                     </Nav.Item>
-                    <Nav.Link href="#business" onClick={() => changeCategory('business')}>Business</Nav.Link>
-                    <Nav.Link href="#science">Science</Nav.Link>
-                    <Nav.Link href="#politics">Politics</Nav.Link>
-                    <Nav.Link href="#world">World</Nav.Link>
-                    <Nav.Link href="#sports">Sports</Nav.Link>
-                    <Nav.Link href="#academia">Academia</Nav.Link>
-                    <Nav.Link href="#game">Game</Nav.Link>
+
+                    <Nav.Item onClick={() => changeCategory('business')}>
+                        <Link to="/business" className="link">Business</Link>
+                    </Nav.Item>
+
+                    <Nav.Item onClick={() => changeCategory('science')}>
+                        <Link to="/science" className="link">Science</Link>
+                    </Nav.Item>
+
+                    <Nav.Item onClick={() => changeCategory('politics')}>
+                        <Link to="/politics" className="link">Politics</Link>
+                    </Nav.Item>
+
+                    <Nav.Item onClick={() => changeCategory('world')}>
+                        <Link to="/world" className="link">World</Link>
+                    </Nav.Item>
+
+                    <Nav.Item onClick={() => changeCategory('sports')}>
+                        <Link to="/sports" className="link">Sports</Link>
+                    </Nav.Item>
+
+                    <Nav.Item onClick={() => changeCategory('academia')}>
+                        <Link to="/academia" className="link">Academia</Link>
+                    </Nav.Item>
+
+                    <Nav.Item onClick={() => changeCategory('game')}>
+                        <Link to="/game" className="link">Game</Link>
+                    </Nav.Item>
+
                     <NavDropdown title="More" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Lifestyle</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Regional</NavDropdown.Item>
