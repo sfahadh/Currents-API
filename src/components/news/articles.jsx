@@ -4,11 +4,11 @@ import './news.css'
 
 const articles = ({ news }) => {
     if (!news) return <p>Sorry! No news</p>
+    console.log(news);
     return (
         <div id="articles">
             {
                 news.map(article => {
-                    console.log(article)
                     return (
                         <div className="container-fluid" key={article.id}>
                             <div className="row">
