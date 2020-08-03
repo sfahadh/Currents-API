@@ -28,7 +28,7 @@ function App() {
           </Route>
 
           <Route path="/category">
-            <CategorizedNews />
+            <CategorizedNews category={category} />
           </Route>
         </Switch>
       </div>

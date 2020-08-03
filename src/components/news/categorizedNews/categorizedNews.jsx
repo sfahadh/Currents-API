@@ -11,8 +11,14 @@ class categorizedNews extends Component {
         }
     }
 
+    async componentDidMount() {
+        const resp = await fetch(`${URL}${this.props.category}&apiKey=${API_KEY}`)
+        const json = await resp.json();
+        this.setState({ data: json });
+    }
 
     render() {
+        console.log(this.state.data)
         return (
             <>
             </>
