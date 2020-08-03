@@ -12,35 +12,35 @@ const NavigationBar = ({ changeCategory }) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto" >
-                    <Nav.Item onClick={() => changeCategory('technology')}>
+                    <Nav.Item onClick={() => changeCategory('technology')} className="nav-link">
                         <Link to="/technology" className="link">Technology</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('business')}>
+                    <Nav.Item onClick={() => changeCategory('business')} className="nav-link">
                         <Link to="/business" className="link">Business</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('science')}>
+                    <Nav.Item onClick={() => changeCategory('science')} className="nav-link">
                         <Link to="/science" className="link">Science</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('politics')}>
+                    <Nav.Item onClick={() => changeCategory('politics')} className="nav-link">
                         <Link to="/politics" className="link">Politics</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('world')}>
+                    <Nav.Item onClick={() => changeCategory('world')} className="nav-link">
                         <Link to="/world" className="link">World</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('sports')}>
+                    <Nav.Item onClick={() => changeCategory('sports')} className="nav-link">
                         <Link to="/sports" className="link">Sports</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('academia')}>
+                    <Nav.Item onClick={() => changeCategory('academia')} className="nav-link">
                         <Link to="/academia" className="link">Academia</Link>
                     </Nav.Item>
 
-                    <Nav.Item onClick={() => changeCategory('game')}>
+                    <Nav.Item onClick={() => changeCategory('game')} className="nav-link">
                         <Link to="/game" className="link">Game</Link>
                     </Nav.Item>
 
