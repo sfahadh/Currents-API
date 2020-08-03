@@ -9,7 +9,7 @@ const searchBar = () => {
     return (
         <>
             <h1 className="text-center display-3 mt-5 mb-4">Welcome to Current News</h1>
-            <form class="form-inline d-flex justify-content-center input-group m-auto">
+            <form className="form-inline d-flex justify-content-center input-group m-auto">
                 <div className="input-group-prepend">
                     <span className="input-group-text">
                         <FontAwesomeIcon icon={faSearch} />

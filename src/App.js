@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [category, setCategory] = React.useState('');
-  console.log(category);
 
   const changeCategory = newCategory => {
     setCategory(newCategory);

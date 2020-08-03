@@ -5,7 +5,7 @@ import '../news.css'
 const URL = "https://api.currentsapi.services/v1/latest-news?";
 const API_KEY = process.env.REACT_APP_CURRENTS_API_KEY;
 
-class searchNews extends Component {
+class latestNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,4 +30,4 @@ class searchNews extends Component {
     }
 }
 
-export default searchNews;
+export default latestNews;

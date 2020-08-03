@@ -3,10 +3,10 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './navigationBar.css'
 
-const NavigationBar = ({ changeCategory, category }) => {
+const NavigationBar = ({ changeCategory }) => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-            <Navbar.Brand href="#home" className="ml-3">
+            <Navbar.Brand className="ml-3">
                 <Link to="/" className="link">CN</Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
