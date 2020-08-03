@@ -12,8 +12,10 @@ const NavigationBar = ({ changeCategory }) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto" >
-                    <Nav.Link href="#technology" onClick={() => changeCategory('Technology')}>Technology</Nav.Link>
-                    <Nav.Link href="#business" onClick={() => changeCategory('Business')}>Business</Nav.Link>
+                    <Nav.Item onClick={() => changeCategory('technology')}>
+                        <Link to="/category" className="link">Technology</Link>
+                    </Nav.Item>
+                    <Nav.Link href="#business" onClick={() => changeCategory('business')}>Business</Nav.Link>
                     <Nav.Link href="#science">Science</Nav.Link>
                     <Nav.Link href="#politics">Politics</Nav.Link>
                     <Nav.Link href="#world">World</Nav.Link>
