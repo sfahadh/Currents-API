@@ -4,7 +4,6 @@ import './news.css'
 
 const articles = ({ news }) => {
     if (!news) return <p>Sorry! No news</p>
-    console.log(news);
     return (
         <div id="articles">
             {

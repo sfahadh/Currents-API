@@ -12,10 +12,22 @@ class categorizedNews extends Component {
         }
     }
 
-    async componentDidMount() {
+    async fetchData() {
+        console.log(this.props.category)
         const resp = await fetch(`${URL}${this.props.category}&apiKey=${API_KEY}`)
         const json = await resp.json();
+        console.log(json);
         this.setState({ data: json });
+    }
+
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.category !== this.props.category) {
+            this.fetchData();
+        }
     }
 
     render() {
