@@ -30,8 +30,11 @@ const articles = ({ news }) => {
                                             </div>
                                         </div>
 
-                                        <div className="card-footer">
-                                            <small className="text-muted">{article.published}</small>
+                                        <div className="card-footer d-flex justify-content-between">
+                                            <small>For full article:
+                                                <a href={article.url} target="_blank" className="ml-1">Click Here</a>
+                                            </small>
+                                            <small className="text-muted">Published: {article.published}</small>
                                         </div>
                                     </div>
                                 </div>
