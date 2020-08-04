@@ -7,8 +7,8 @@ import './home.css'
 
 const searchBar = () => {
     return (
-        <>
-            <h1 className="text-center display-3 mt-5 mb-4">Welcome to Current News</h1>
+        <div className="align-middle center">
+            <h1 className="text-center display-3 mt-5 mb-5">Welcome to Current News</h1>
             <form className="form-inline d-flex justify-content-center input-group m-auto">
                 <div className="input-group-prepend">
                     <span className="input-group-text">
@@ -19,7 +19,7 @@ const searchBar = () => {
                     aria-label="Search" />
                 <Button className="ml-3" variant="primary">Search</Button>{' '}
             </form>
-        </>
+        </div>
     );
 }
 
