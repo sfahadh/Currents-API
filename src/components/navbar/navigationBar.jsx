@@ -9,6 +9,7 @@ const NavigationBar = ({ changeCategory }) => {
             <Navbar.Brand className="ml-3">
                 <Link to="/" className="link">CN</Link>
             </Navbar.Brand>
+
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto" >
@@ -45,17 +46,36 @@ const NavigationBar = ({ changeCategory }) => {
                     </Nav.Item>
 
                     <NavDropdown title="More" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Lifestyle</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Regional</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">General</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Programming</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Finance</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Health</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Food</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Others</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => changeCategory('lifestyle')}>
+                            <Link to="/lifestyle" className="text-dark">Lifestyle</Link>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item onClick={() => changeCategory('regional')}>
+                            <Link to="/regional" className="text-dark">Regional</Link>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item onClick={() => changeCategory('general')}>
+                            <Link to="/general" className="text-dark">General</Link>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item onClick={() => changeCategory('programming')}>
+                            <Link to="/programming" className="text-dark">Programming</Link>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item onClick={() => changeCategory('finance')}>
+                            <Link to="/finance" className="text-dark">Finance</Link>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item onClick={() => changeCategory('health')}>
+                            <Link to="/health" className="text-dark">Health</Link>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item onClick={() => changeCategory('food')}>
+                            <Link to="/food" className="text-dark">Food</Link>
+                        </NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
+
                 <Nav.Item className="mr-3">
                     <Link to="/latestNews" className="link">Latest News</Link>
                 </Nav.Item>
