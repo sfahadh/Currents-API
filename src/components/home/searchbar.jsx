@@ -2,12 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'react-bootstrap';
-
 import './home.css'
 
 const searchBar = () => {
     return (
-        <div className="align-middle center">
+        <div className="center">
             <h1 className="text-center display-3 mt-5 mb-5">Welcome to Current News</h1>
             <form className="form-inline d-flex justify-content-center input-group m-auto">
                 <div className="input-group-prepend">
