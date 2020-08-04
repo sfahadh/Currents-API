@@ -9,3 +9,14 @@ hr {
     display: flex;
     flex: 1 1 auto;
 }
+
+@media (max-width: 800px) {
+    .card-horizontal {
+        display: block;
+    }
+
+    .img-square-wrapper img {
+        display: block;
+        margin: auto;
+    }
+}

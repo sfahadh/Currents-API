@@ -9,7 +9,7 @@ const articles = ({ news }) => {
             {
                 news.map(article => {
                     return (
-                        <div className="container-fluid" key={article.id}>
+                        <div className="container-fluid mb-4" key={article.id}>
                             <div className="row">
                                 <div className="col-12 mt-3">
                                     <div className="card">
@@ -24,7 +24,9 @@ const articles = ({ news }) => {
 
                                             <div className="card-body">
                                                 <h4 className="card-title">{article.title}</h4>
-                                                <p className="card-text">{article.description}</p>
+                                                <p className="card-text">
+                                                    {article.description === "" ? "No description available" : article.description}
+                                                </p>
                                             </div>
                                         </div>
 
