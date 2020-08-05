@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationBar from './components/navbar/navigationBar';
-import Home from './components/home/searchbar';
+import Home from './components/home/Searchbar';
 import LatestNews from './components/news/latestNews/latestNews';
 import CategorizedNews from './components/news/categorizedNews/categorizedNews';
 import { Switch, Route } from "react-router-dom";

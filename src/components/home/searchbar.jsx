@@ -4,8 +4,8 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'react-bootstrap';
 import './home.css'
 
-const SearchBar = () => {
-    const [search, setSearch] = React.useState('');
+function SearchBar() {
+    const [search, setSearch] = React.useState("");
 
     return (
         <div className="center">
@@ -16,8 +16,13 @@ const SearchBar = () => {
                         <FontAwesomeIcon icon={faSearch} />
                     </span>
                 </div>
-                <input className="form-control my-0 py-1 w-50" type="text" placeholder="search for news"
-                    aria-label="Search" />
+                <input className="form-control my-0 py-1 w-50"
+                    type="text"
+                    placeholder="search for news"
+                    aria-label="Search"
+                    onChange={e => setSearch(e.target.value)}
+                    value={search}
+                />
                 <Button className="ml-3" variant="primary">Search</Button>{' '}
             </form>
         </div>
