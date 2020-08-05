@@ -7,11 +7,19 @@ import './home.css'
 
 function SearchBar() {
     const [search, setSearch] = React.useState("");
+    const [submit, setSubmit] = React.useState(false);
+
+    const submitSearch = e => {
+        e.preventDefault();
+        setSubmit(true);
+    }
 
     return (
         <div className="center">
             <h1 className="text-center display-3 mt-5 mb-5">Welcome to Current News</h1>
-            <form className="form-inline d-flex justify-content-center input-group m-auto">
+            <form className="form-inline d-flex justify-content-center input-group m-auto"
+                onClick={submitSearch}
+            >
                 <div className="input-group-prepend">
                     <span className="input-group-text">
                         <FontAwesomeIcon icon={faSearch} />
@@ -27,7 +35,7 @@ function SearchBar() {
                 <Button className="ml-3" variant="primary">Search</Button>
             </form>
 
-            <SearchNews search={search} />
+            <SearchNews search={search} isSubmitted={submit} />
         </div>
     );
 }
