@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Articles from '../articles';
+import SearchedNewsArticles from './searchedNewsArticle';
 import '../news.css'
 
 const URL = "https://api.currentsapi.services/v1/search?keywords=";
@@ -9,14 +9,23 @@ class searchNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: [],
         }
     }
 
-    async componentDidMount() {
-        const resp = await fetch(`${URL}${this.props.search}&language=en&apiKey=${API_KEY}`)
-        const json = await resp.json();
-        this.setState({ data: json });
+    fetchData = async () => {
+        if (this.props.isSubmitted) {
+            const resp = await fetch(`${URL}${this.props.search}&language=en&apiKey=${API_KEY}`)
+            const json = await resp.json();
+            this.setState({ data: json });
+            this.props.clickedSearch(false);
+        }
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.isSubmitted !== this.props.isSubmitted) {
+            this.fetchData();
+        }
     }
 
     render() {
@@ -24,12 +33,11 @@ class searchNews extends Component {
         console.log(this.state.data.news);
         return (
             <>
-                <h1>Searched News</h1>
-                <hr />
-                {/* <Articles news={this.state.data.news} /> */}
+                <SearchedNewsArticles />
             </>
         )
     }
 }
+
 
 export default searchNews;

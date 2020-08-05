@@ -1,12 +1,12 @@
 import React from 'react';
-import SearchBar from '../../home/Searchbar';
-import Articles from '../articles';
+// import SearchBar from '../../home/Searchbar';
+// import Articles from '../articles';
 
-const searchedNewsArticles = () => {
+const searchedNewsArticles = ({ news }) => {
     return (
         <>
-            <SearchBar />
-            <Articles />
+            {/* <SearchBar />
+            <Articles news={news} /> */}
         </>
     );
 }
