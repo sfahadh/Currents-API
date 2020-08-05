@@ -4,7 +4,9 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'react-bootstrap';
 import './home.css'
 
-const searchBar = () => {
+const SearchBar = () => {
+    const [search, setSearch] = React.useState('');
+
     return (
         <div className="center">
             <h1 className="text-center display-3 mt-5 mb-5">Welcome to Current News</h1>
@@ -22,4 +24,4 @@ const searchBar = () => {
     );
 }
 
-export default searchBar;
+export default SearchBar;
