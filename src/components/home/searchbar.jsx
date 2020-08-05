@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Button } from 'react-bootstrap';
+import SearchNews from '../news/searchNews/searchNews';
 import './home.css'
 
 function SearchBar() {
@@ -23,8 +24,10 @@ function SearchBar() {
                     onChange={e => setSearch(e.target.value)}
                     value={search}
                 />
-                <Button className="ml-3" variant="primary">Search</Button>{' '}
+                <Button className="ml-3" variant="primary">Search</Button>
             </form>
+
+            <SearchNews search={search} />
         </div>
     );
 }

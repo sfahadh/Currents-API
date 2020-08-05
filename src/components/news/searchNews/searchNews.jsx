@@ -15,6 +15,8 @@ class searchNews extends Component {
     render() {
         return (
             <>
+                <h1>Searched News</h1>
+                <hr />
             </>
         )
     }
