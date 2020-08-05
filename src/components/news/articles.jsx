@@ -32,7 +32,7 @@ const articles = ({ news }) => {
 
                                         <div className="card-footer d-flex justify-content-between">
                                             <small>For full article:
-                                                <a href={article.url} target="_blank" className="ml-1">Click Here</a>
+                                                <a href={article.url} target="_blank" rel="noopener noreferrer" className="ml-1">Click Here</a>
                                             </small>
                                             <small className="text-muted">Published: {article.published.slice(0, 11)}</small>
                                         </div>
