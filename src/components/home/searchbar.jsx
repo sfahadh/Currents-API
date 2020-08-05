@@ -17,10 +17,16 @@ function SearchBar() {
         setSubmit(clicked);
     }
 
+    const onKeyPress = event => {
+        if (event.which === 13 /* Enter */) {
+            event.preventDefault();
+        }
+    }
+
     return (
         <div className="center">
             <h1 className="text-center display-3 mt-5 mb-5">Welcome to Current News</h1>
-            <form className="form-inline input-group m-auto">
+            <form className="form-inline input-group m-auto" onKeyPress={onKeyPress}>
                 <div className="input-group-prepend">
                     <span className="input-group-text">
                         <FontAwesomeIcon icon={faSearch} />
@@ -35,7 +41,11 @@ function SearchBar() {
                     value={search}
                 />
 
-                <Button className="ml-3" variant="primary" value="Submit" onClick={submitSearch}>Search</Button>
+                <Button className="ml-3"
+                    variant="primary"
+                    value="Submit"
+                    onClick={submitSearch}>Search
+                </Button>
             </form>
 
             <SearchNews search={search} isSubmitted={submit} clickedSearch={clickedSearch} />
