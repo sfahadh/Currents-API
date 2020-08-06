@@ -47,6 +47,8 @@ function SearchBar() {
                 </Button>
             </form>
 
+            <br />
+
             <SearchNews
                 search={search}
                 isSubmitted={submit}

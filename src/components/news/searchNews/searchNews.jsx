@@ -15,10 +15,10 @@ class searchNews extends Component {
 
     fetchData = async () => {
         if (this.props.isSubmitted) {
+            this.props.clickedSearch(false);
             const resp = await fetch(`${URL}${this.props.search}&language=en&apiKey=${API_KEY}`)
             const json = await resp.json();
             this.setState({ data: json });
-            this.props.clickedSearch(false);
         }
     }
 
@@ -29,6 +29,7 @@ class searchNews extends Component {
     }
 
     render() {
+        console.log(this.props.isSubmitted)
         console.log(this.state.data.news);
         return (
             <>
