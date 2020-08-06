@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Articles from '../articles';
 import '../news.css'
 
 const URL = "https://api.currentsapi.services/v1/search?keywords=";
@@ -31,7 +32,7 @@ class searchNews extends Component {
         console.log(this.state.data.news);
         return (
             <>
-
+                <Articles news={this.state.data.news} />
             </>
         )
     }

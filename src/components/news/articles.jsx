@@ -3,7 +3,7 @@ import Blank from '../../Images/no-image-found.jpeg'
 import './news.css'
 
 const articles = ({ news }) => {
-    if (!news) return <p>Sorry! No news</p>
+    if (!news) return null
     return (
         <div id="articles">
             {
