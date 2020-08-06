@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchedNewsArticles from './searchedNewsArticle';
+import { Redirect } from 'react-router-dom';
 import '../news.css'
 
 const URL = "https://api.currentsapi.services/v1/search?keywords=";
@@ -29,11 +29,15 @@ class searchNews extends Component {
     }
 
     render() {
-        console.log(this.props.search, this.props.isSubmitted);
-        console.log(this.state.data.news);
+        console.log(this.props.isSubmitted, this.props.redirected);
         return (
             <>
-                <SearchedNewsArticles />
+                {this.props.redirected ?
+                    <Redirect to={{
+                        pathname: '/searchedNews',
+                        state: { news: this.state.data.news }
+                    }}
+                    /> : null}
             </>
         )
     }
