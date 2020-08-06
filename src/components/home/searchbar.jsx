@@ -8,11 +8,11 @@ import './home.css'
 function SearchBar() {
     const [search, setSearch] = React.useState("");
     const [submit, setSubmit] = React.useState(false);
-    const [redirected, setRedirected] = React.useState(false);
+    // const [redirected, setRedirected] = React.useState(false);
 
     const submitSearch = () => {
         setSubmit(true);
-        setRedirected(true);
+        // setRedirected(true);
     }
 
     const clickedSearch = clicked => {
@@ -54,7 +54,7 @@ function SearchBar() {
                 search={search}
                 isSubmitted={submit}
                 clickedSearch={clickedSearch}
-                redirected={redirected}
+            // redirected={redirected}
             />
         </div>
     );

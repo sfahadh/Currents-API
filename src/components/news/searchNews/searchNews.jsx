@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import '../news.css'
 
 const URL = "https://api.currentsapi.services/v1/search?keywords=";
@@ -29,15 +28,10 @@ class searchNews extends Component {
     }
 
     render() {
-        console.log(this.props.isSubmitted, this.props.redirected);
+        console.log(this.state.data.news);
         return (
             <>
-                {this.props.redirected ?
-                    <Redirect to={{
-                        pathname: '/searchedNews',
-                        state: { news: this.state.data.news }
-                    }}
-                    /> : null}
+
             </>
         )
     }

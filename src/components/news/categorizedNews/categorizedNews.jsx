@@ -13,7 +13,6 @@ class categorizedNews extends Component {
     }
 
     async fetchData() {
-        console.log(this.props.category)
         const resp = await fetch(`${URL}${this.props.category}&apiKey=${API_KEY}`)
         const json = await resp.json();
         console.log(json);
