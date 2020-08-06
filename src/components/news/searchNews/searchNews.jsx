@@ -10,15 +10,21 @@ class searchNews extends Component {
         super(props);
         this.state = {
             data: [],
+            attemptFetch: false
         }
     }
 
     fetchData = async () => {
         if (this.props.isSubmitted) {
             this.props.clickedSearch(false);
-            const resp = await fetch(`${URL}${this.props.search}&language=en&apiKey=${API_KEY}`)
-            const json = await resp.json();
-            this.setState({ data: json });
+            this.setState({ attemptFetch: true })
+            try {
+                const resp = await fetch(`${URL}${this.props.search}&language=en&apiKey=${API_KEY}`)
+                const json = await resp.json();
+                this.setState({ data: json });
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 
@@ -29,11 +35,10 @@ class searchNews extends Component {
     }
 
     render() {
-        console.log(this.props.isSubmitted)
-        console.log(this.state.data.news);
+        console.log(this.state.attemptFetch);
         return (
             <>
-                <Articles news={this.state.data.news} />
+                <Articles news={this.state.data.news} attemptFetch={this.state.attemptFetch} />
             </>
         )
     }

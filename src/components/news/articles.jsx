@@ -2,8 +2,9 @@ import React from 'react';
 import Blank from '../../Images/no-image-found.jpeg'
 import './news.css'
 
-const articles = ({ news }) => {
-    if (!news) return null
+const articles = ({ news, attemptFetch }) => {
+    if (attemptFetch) return <p>No news founded</p>;
+    if (!news) return null;
     return (
         <div id="articles">
             {
