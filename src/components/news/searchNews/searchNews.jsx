@@ -32,10 +32,12 @@ class searchNews extends Component {
         if (prevProps.isSubmitted !== this.props.isSubmitted) {
             this.fetchData();
         }
+        if (this.state.data.length) this.setState({ attemptFetch: false });
     }
 
     render() {
         console.log(this.state.attemptFetch);
+        console.log(this.state.data);
         return (
             <>
                 <Articles news={this.state.data.news} attemptFetch={this.state.attemptFetch} />
