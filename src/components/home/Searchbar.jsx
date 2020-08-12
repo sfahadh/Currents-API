@@ -33,6 +33,7 @@ function SearchBar() {
                 </div>
 
                 <input className="form-control my-0 py-1 w-50"
+                    id="searchbar"
                     type="text"
                     placeholder="search for news"
                     aria-label="Search"

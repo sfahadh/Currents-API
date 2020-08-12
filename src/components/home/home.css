@@ -2,11 +2,17 @@
     width: 60vw !important;
 }
 
+#searchbar {
+    border-radius: 0 30px 30px 0;
+    border-color: rgb(58, 58, 58);
+}
+
 @media (max-width: 500px) {
     h1 {
         font-size: 45px !important;
     }
 
+    .input-group {
+        width: 70vw !important;
+    }
 }
-
-@media (max-width: 435px) {}
