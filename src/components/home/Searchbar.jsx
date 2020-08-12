@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Button } from 'react-bootstrap';
 import SearchNews from '../news/searchNews/searchNews';
 import './home.css'
 
@@ -20,12 +19,13 @@ function SearchBar() {
     const onKeyPress = event => {
         if (event.which === 13 /* Enter */) {
             event.preventDefault();
+            submitSearch();
         }
     }
 
     return (
         <>
-            <form className="form-inline input-group m-auto" onKeyPress={onKeyPress}>
+            <form className="form-inline input-group m-auto" id="form" onKeyPress={onKeyPress}>
                 <div className="input-group-prepend">
                     <span className="input-group-text">
                         <FontAwesomeIcon icon={faSearch} />
@@ -39,12 +39,6 @@ function SearchBar() {
                     onChange={e => setSearch(e.target.value)}
                     value={search}
                 />
-
-                <Button className="ml-3"
-                    variant="primary"
-                    value="Submit"
-                    onClick={submitSearch}>Search
-                </Button>
             </form>
 
             <br />
