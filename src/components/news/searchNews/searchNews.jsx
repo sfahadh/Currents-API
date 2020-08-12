@@ -36,8 +36,6 @@ class searchNews extends Component {
     }
 
     render() {
-        console.log(this.state.attemptFetch);
-        console.log(this.state.data);
         return (
             <>
                 <Articles news={this.state.data.news} attemptFetch={this.state.attemptFetch} />

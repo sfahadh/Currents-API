@@ -10,6 +10,11 @@ hr {
     flex: 1 1 auto;
 }
 
+.news-image {
+    width: 400px;
+    height: 240px;
+}
+
 @media (max-width: 800px) {
     .card-horizontal {
         display: block;
@@ -18,5 +23,19 @@ hr {
     .img-square-wrapper img {
         display: block;
         margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .news-image {
+        width: 81vw;
+        height: 50vw;
+    }
+}
+
+@media (max-width: 435px) {
+    .news-image {
+        width: 79vw;
+        height: 48vw;
     }
 }

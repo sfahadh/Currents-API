@@ -18,8 +18,7 @@ const articles = ({ news, attemptFetch }) => {
                                             <div className="img-square-wrapper">
                                                 <img src={article.image === "None" ? Blank : article.image}
                                                     alt={article.title}
-                                                    width="350px"
-                                                    height="200px"
+                                                    className="news-image"
                                                 />
                                             </div>
 
